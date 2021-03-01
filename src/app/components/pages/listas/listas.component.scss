@@ -1,0 +1,54 @@
+
+.container{
+
+margin-top: 30px;
+display: grid;
+grid-template-columns: 24% 24% 24%;
+grid-column-gap: 10px;
+grid-row-gap: 15;
+justify-content: center;
+
+a{
+cursor: pointer;
+color: rgb(65, 4, 4);
+text-decoration: none;
+
+}
+
+}
+
+.post-card {
+    max-width: 300px;
+    max-height: 400px;
+    background: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  padding-left: 20;
+  font-size: 40;
+
+  }
+  .imagen {
+  max-width: 100%;
+  height: 50;
+}
+  .titulo{
+    font-size: 15px;
+  }
+  .example-header-image {
+    background-image: url('https://i.pinimg.com/originals/9d/5a/c6/9d5ac6da7764801550b34d094cabcf5e.jpg');
+    background-size: cover;
+  }
+.post-card{
+  background: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+
+
+
+

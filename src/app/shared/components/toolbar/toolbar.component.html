@@ -1,0 +1,13 @@
+ <mat-toolbar color="primary">
+     <span>WebPraxedes      </span><br>
+
+  <li class="waves-effect waves-light"><a routerLink="/"       routerLinkActive="active"><i class="material-icons">home</i></a></li>  
+  <li class="waves-effect waves-light"><a routerLink="/listas" routerLinkActive="active"><i class="material-icons">listas</i></a></li>
+
+  <li class="waves-effect waves-light"><a routerLink="/login"  routerLinkActive="active"><i class="material-icons">login</i></a></li>
+  <li class="waves-effect waves-light"><a routerLink="/favoritos" routerLinkActive="active"><i class="material-icons">favorite</i></a></li>
+   <li class="waves-effect waves-light" *ngif="show"><a routerLink="/cerrar" routerLinkActive="active"><i class="material-icons">logout</i></a></li>
+
+</mat-toolbar>
+
+ 

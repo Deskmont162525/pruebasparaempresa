@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Soy el Mejor</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+  
+  <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+<!--Importamos materialize.css-->
+
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" media="screen,projection"/>
+
+  <!--Siempre se debe importar jQuery antes de materialize.js-->
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    
+    $(".contenedor-formularios").find("input, textarea").on("keyup blur focus", function (e) {
+
+        var $this = $(this),
+          label = $this.prev("label");
+
+        if (e.type === "keyup") {
+            if ($this.val() === "") {
+                label.removeClass("active highlight");
+            } else {
+                label.addClass("active highlight");
+            }
+        } else if (e.type === "blur") {
+            if($this.val() === "") {
+                label.removeClass("active highlight"); 
+                } else {
+                label.removeClass("highlight");   
+                }   
+        } else if (e.type === "focus") {
+            if($this.val() === "") {
+                label.removeClass("highlight"); 
+            } 
+            else if($this.val() !== "") {
+                label.addClass("highlight");
+            }
+        }
+
+    });
+
+    $(".tab a").on("click", function (e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass("active");
+        $(this).parent().siblings().removeClass("active");
+
+        target = $(this).attr("href");
+
+        $(".contenido-tab > div").not(target).hide();
+
+        $(target).fadeIn(600);
+
+    });
+    
+});
+
+
+
+</script> 
+
+
+</head>
+<body>
+  <app-root></app-root>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW0td9v69m95iy5Q2YiMebpIO7ztCnuPU&language=en"></script>
+  <script src="js/jquery.js"></script>
+   <script src="js/main.js"></script>
+</body>
+</html>
